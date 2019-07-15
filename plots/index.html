@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body onload="makeList()">
+</body>
+
+</html>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="js/plot.js"></script>
+<script>
+    function makeList() {
+        var vs = [ "From East", "to West,", "at Home", "is Best" ];   1
+    
+        d3.select( "body" )                                           2
+            .append( "ul" ).selectAll( "li" )                         3
+            .data(vs).enter()                                         4
+            .append("li").text( d => d );                             5
+    }
+      </script>
